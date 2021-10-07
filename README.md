@@ -7,9 +7,11 @@ A repository template for ECMA402 proposals.
 You can browse the [ecmarkup output](https://FrankYFTang.github.io/proposal-intl-segmenter-v2/)
 or browse the [source](https://github.com/FrankYFTang/proposal-intl-segmenter-v2/blob/HEAD/spec.emu).
 
-## Stage and advancement slides
+## Stage 0
 
-Stage 0 proposal  
+## Stage Advancement Slide
+* Slides for TG2 Stage 1 concensus TBW (Plan to discuss in ECMA402 TG2 2021 Nov 4 meeting)
+* Slides for Stage 1 Advancement TBW (Plan propose to Stage 1 in TC39 2021 Dec 15 meeting)
 
 ## Staff
 * Champion: Frank Yung-Fong Tang
