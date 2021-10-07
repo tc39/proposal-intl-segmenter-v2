@@ -34,19 +34,52 @@ TBW
 ## Examples
 TBW
 
-## Analysis of TG2 Requirements
-### Prior Art (for Stage 2)
+## [TODO before Stage 1](https://tc39.es/process-document/)
+### Entrance Criteria to Stage 1
+* Identified “champion” who will advance the addition **DONE => Frank Yung-fong Tang**
+* Prose outlining the problem or need and the general shape of a solution
+* Illustrative examples of usage
+* High-level API
+* Discussion of key algorithms, abstractions and semantics
+* Identification of potential “cross-cutting” concerns and implementation challenges/complexity
+* A publicly available repository for the proposal that captures the above requirements
+
+### Acceptance Signifies for Stage 1 
+The committee expects to devote time to examining the problem space, solutions and cross-cutting concerns
+
+### Purpose During Stage 1
+* Make the case for the addition
+* Describe the shape of a solution
+* Identify potential challenges
+
+## [TODO before Stage 2](https://tc39.es/process-document/)
+### Entrance Criteria to Stage 2
+...
+### Acceptance Signifies for Stage 2
+...
+### Purpose During Stage 2
+...
+
+### Analysis of TG2 Requirements
+#### Prior Art (for Stage 2)
 TBW
 
-### Expensive to Implement in Userland (for Stage 2)
+#### Expensive to Implement in Userland (for Stage 2)
 TBW
 
-### Broad Appeal (for Stage 2)
+#### Broad Appeal (for Stage 2)
 TBW
 
-### Payload Mitigation (for Stage 3)
+## [TODO before Stage 3](https://tc39.es/process-document/)
+### Entrance Criteria to Stage 3
+...
+### Acceptance Signifies for Stage 3
+...
+### Purpose During Stage 3
+...
+### Analysis of TG2 Requirements
+#### Payload Mitigation (for Stage 3)
 TBW
-
       
 # TODO of the repo
  
