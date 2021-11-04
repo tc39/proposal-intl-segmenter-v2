@@ -29,7 +29,12 @@ This proposal aim to improve the [Intl.Segmenter](https://tc39.es/proposal-intl-
 TBW
 
 ### Line Break Granularity
-TBW
+* (From @gibson042 ) Formatting in a monospace context, such as a CLI or GitHub source diff.
+* For non-HTML context while font metrics is available 
+* &lt;text&gt; in SVG and https://d3js.org/ 
+* To avoid the misue of word break in the place for line break. (Canvas drawstring and SVG usecase)
+
+
 
 ## Examples
 TBW
