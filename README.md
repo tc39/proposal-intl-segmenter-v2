@@ -33,6 +33,7 @@ TBW
 * For non-HTML context while font metrics is available 
 * &lt;text&gt; in SVG and https://d3js.org/ 
 * To avoid the misue of word break in the place for line break. (Canvas drawstring and SVG usecase)
+* Being persistently requested by users even after the shipment of Intl.Segmenter
 
 
 
