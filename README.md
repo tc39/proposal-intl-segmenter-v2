@@ -48,7 +48,7 @@ TBW
 * High-level API
 * Discussion of key algorithms, abstractions and semantics
 * Identification of potential “cross-cutting” concerns and implementation challenges/complexity
-* A publicly available repository for the proposal that captures the above requirements
+* A publicly available repository for the proposal that captures the above requirements **DONE => this one**
 
 ### Acceptance Signifies for Stage 1 
 The committee expects to devote time to examining the problem space, solutions and cross-cutting concerns
