@@ -10,8 +10,8 @@ or browse the [source](https://github.com/FrankYFTang/proposal-intl-segmenter-v2
 ## Stage 0
 
 ## Stage Advancement Slide
-* [Slides for TG2 Stage 1 concensus](https://docs.google.com/presentation/d/1ezpdee0r_ujHXDqqT4HHNYa2Q4VU7b4cMQWg6gQxLTk/) (Plan to discuss in ECMA402 TG2 2021 Dec 2 meeting)
-* [Slides for Stage 1 Advancement](https://docs.google.com/presentation/d/1ezpdee0r_ujHXDqqT4HHNYa2Q4VU7b4cMQWg6gQxLTk/) (Plan propose to Stage 1 in TC39 2021 Dec 15 meeting)
+* [Slides for TG2/ECMA402 Stage 1 concensus](https://docs.google.com/presentation/d/1ezpdee0r_ujHXDqqT4HHNYa2Q4VU7b4cMQWg6gQxLTk/) (Plan to discuss in TG2/ECMA402 2021 Dec 2 meeting)
+* [Slides for TC39 Stage 1 Advancement](https://docs.google.com/presentation/d/1ezpdee0r_ujHXDqqT4HHNYa2Q4VU7b4cMQWg6gQxLTk/) (Plan propose to Stage 1 in TC39 2021 Dec 15 meeting)
 
 ## Staff
 * Champion: Frank Yung-Fong Tang
