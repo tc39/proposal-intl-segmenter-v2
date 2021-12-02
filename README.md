@@ -34,7 +34,9 @@ TBW
 * &lt;text&gt; in SVG and https://d3js.org/ 
 * To avoid the misue of word break in the place for line break. (Canvas drawstring and SVG usecase)
 * Being persistently requested by users even after the shipment of Intl.Segmenter
-
+* (from my2iu) It is becoming increasingly common now for web apps to have custom text rendering, and these web apps need an API for line segmentation to be able to lay out text in lines with wrapping. HTML/CSS are too high-level to provide the font support that many web apps need, so low-level API is needed. Line-breaking libraries tend to be fairly large, so it's not really practical to directly bundle them in web apps either, so it would be better if the browser could provide this functionality. Custom text rendering is used in
+  * application web apps for word processing, vector illustration, paint programs, svg visualizations, etc any web page that needs to render text in WebGL or VR/AR (via WebXR). 
+  * Good-looking text in 3d engines is commonly implemented using signed-distance fields, which requires a custom text renderer
 
 
 ## Examples
