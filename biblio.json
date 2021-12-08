@@ -1,0 +1,52 @@
+{
+  "https://tc39.github.io/ecma402/": [
+    {
+      "type": "op",
+      "aoid": "GetOption",
+      "id": "sec-getoption"
+    },
+    {
+      "type": "op",
+      "aoid": "ResolveLocale",
+      "id": "sec-resolvelocale"
+    },
+    {
+      "type": "op",
+      "aoid": "CanonicalizeLocaleList",
+      "id": "sec-canonicalizelocalelist"
+    },
+    {
+      "type": "op",
+      "aoid": "SupportedLocales",
+      "id": "sec-supportedlocales"
+    },
+    {
+      "type": "clause",
+      "id": "sec-internal-slots",
+      "title": "Internal slots of Service Constructors",
+      "number": "9.1"
+    },
+    {
+      "type": "op",
+      "aoid": "GetOptionsObject",
+      "id": "sec-getoptionsobject"
+    }
+  ],
+  "https://tc39.github.io/ecma262/": [
+    {
+      "type": "op",
+      "aoid": "OrdinaryObjectCreate",
+      "id": "sec-ordinaryobjectcreate"
+    },
+    {
+      "type": "op",
+      "aoid": "RequireInternalSlot",
+      "id": "sec-requireinternalslot"
+    },
+    {
+      "type": "op",
+      "aoid": "ToIntegerOrInfinity",
+      "id": "sec-tointegerorinfinity"
+    }
+  ]
+}
