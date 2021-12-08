@@ -20,7 +20,7 @@ or browse the [source](https://github.com/FrankYFTang/proposal-intl-segmenter-v2
 
 ## Motivation
 This proposal aim to improve the [Intl.Segmenter](https://tc39.es/proposal-intl-segmenter/) API with:
-* A way to segment the text with a batch call to minimize the number of calls between user calls and internal implementation.
+* ~~A way to segment the text with a batch call to minimize the number of calls between user calls and internal implementation.~~
 * Add line break granularity to support high end ECMAScript based text layout applications which already have a way to measure the text width but need a way to access logical line break points.
 
 ## Use Cases
