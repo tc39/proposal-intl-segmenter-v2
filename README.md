@@ -24,10 +24,9 @@ This proposal aim to improve the [Intl.Segmenter](https://tc39.es/proposal-intl-
 * Add line break granularity to support high end ECMAScript based text layout applications which already have a way to measure the text width but need a way to access logical line break points.
 
 ## Use Cases
-### Batch Mode
+### ~~Batch Mode~~
 
-TBW
-
+This part is removed from the proposal. 
 ### Line Break Granularity
 * (From @gibson042 ) Formatting in a monospace context, such as a CLI or GitHub source diff.
 * For non-HTML context while font metrics is available 
