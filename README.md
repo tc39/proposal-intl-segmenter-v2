@@ -26,7 +26,7 @@ This proposal aim to improve the [Intl.Segmenter](https://tc39.es/proposal-intl-
 ## Use Cases
 ### ~~Batch Mode~~
 
-This part is removed from the proposal. 
+Note: The "Batch Mode" is removed from the proposal after careful discussion with some intended users. 
 ### Line Break Granularity
 * (From @gibson042 ) Formatting in a monospace context, such as a CLI or GitHub source diff.
 * For non-HTML context while font metrics is available 
