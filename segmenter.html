@@ -390,7 +390,7 @@
           1. Let _isWordLike_ be a Boolean value indicating whether the _segment_ in _string_ is "word-like" according to locale _segmenter_.[[Locale]].
           1. Perform ! CreateDataPropertyOrThrow(_result_, *"isWordLike"*, _isWordLike_).
         1. <ins>Else if _granularity_ is *"line"*, then</ins>
-          1. <ins>Let _isHardBreak_ be a Boolean value indicating whether the position before the _segment_ in _string_ is a hard, or mandatory, line break, but not a soft line breaks at which a line break is acceptable but not required,  according to locale _segmenter_.[[Locale]] and _segmenter_.[[SegmenterLineBreakStyle]].</ins>
+          1. <ins>Let _isHardBreak_ be a Boolean value indicating whether the position after the _segment_ in _string_ is a hard, or mandatory, line break, but not a soft line breaks at which a line break is acceptable but not required,  according to locale _segmenter_.[[Locale]] and _segmenter_.[[SegmenterLineBreakStyle]].</ins>
           1. <ins>Perform ! CreateDataPropertyOrThrow(_result_, *"isHardBreak"*, _isHardBreak_).</ins>
         1. Return _result_.
       </emu-alg>
