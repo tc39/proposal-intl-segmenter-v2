@@ -40,7 +40,47 @@ Note: The "Batch Mode" is removed from the proposal after careful discussion wit
 
 
 ## Examples
-TBW
+```
+d8> s = new Intl.Segmenter("en", {granularity: "line"})
+[object Intl.Segmenter]
+d8> ss = s.segment("飛虎隊正式名稱為「中華民國空軍美籍志願大隊」，\n1940 年代早期在緬甸展開行動")
+{}
+d8> for (s of ss) { print(JSON.stringify(s)) }
+{"segment":"飛","index":0,"input":"飛虎隊正式名稱為「中華民國空軍美籍志願大隊」，\n1940 年代早期在緬甸展開行動","isHardBreak":false}
+{"segment":"虎","index":1,"input":"飛虎隊正式名稱為「中華民國空軍美籍志願大隊」，\n1940 年代早期在緬甸展開行動","isHardBreak":false}
+{"segment":"隊","index":2,"input":"飛虎隊正式名稱為「中華民國空軍美籍志願大隊」，\n1940 年代早期在緬甸展開行動","isHardBreak":false}
+{"segment":"正","index":3,"input":"飛虎隊正式名稱為「中華民國空軍美籍志願大隊」，\n1940 年代早期在緬甸展開行動","isHardBreak":false}
+{"segment":"式","index":4,"input":"飛虎隊正式名稱為「中華民國空軍美籍志願大隊」，\n1940 年代早期在緬甸展開行動","isHardBreak":false}
+{"segment":"名","index":5,"input":"飛虎隊正式名稱為「中華民國空軍美籍志願大隊」，\n1940 年代早期在緬甸展開行動","isHardBreak":false}
+{"segment":"稱","index":6,"input":"飛虎隊正式名稱為「中華民國空軍美籍志願大隊」，\n1940 年代早期在緬甸展開行動","isHardBreak":false}
+{"segment":"為","index":7,"input":"飛虎隊正式名稱為「中華民國空軍美籍志願大隊」，\n1940 年代早期在緬甸展開行動","isHardBreak":false}
+{"segment":"「中","index":8,"input":"飛虎隊正式名稱為「中華民國空軍美籍志願大隊」，\n1940 年代早期在緬甸展開行動","isHardBreak":false}
+{"segment":"華","index":10,"input":"飛虎隊正式名稱為「中華民國空軍美籍志願大隊」，\n1940 年代早期在緬甸展開行動","isHardBreak":false}
+{"segment":"民","index":11,"input":"飛虎隊正式名稱為「中華民國空軍美籍志願大隊」，\n1940 年代早期在緬甸展開行動","isHardBreak":false}
+{"segment":"國","index":12,"input":"飛虎隊正式名稱為「中華民國空軍美籍志願大隊」，\n1940 年代早期在緬甸展開行動","isHardBreak":false}
+{"segment":"空","index":13,"input":"飛虎隊正式名稱為「中華民國空軍美籍志願大隊」，\n1940 年代早期在緬甸展開行動","isHardBreak":false}
+{"segment":"軍","index":14,"input":"飛虎隊正式名稱為「中華民國空軍美籍志願大隊」，\n1940 年代早期在緬甸展開行動","isHardBreak":false}
+{"segment":"美","index":15,"input":"飛虎隊正式名稱為「中華民國空軍美籍志願大隊」，\n1940 年代早期在緬甸展開行動","isHardBreak":false}
+{"segment":"籍","index":16,"input":"飛虎隊正式名稱為「中華民國空軍美籍志願大隊」，\n1940 年代早期在緬甸展開行動","isHardBreak":false}
+{"segment":"志","index":17,"input":"飛虎隊正式名稱為「中華民國空軍美籍志願大隊」，\n1940 年代早期在緬甸展開行動","isHardBreak":false}
+{"segment":"願","index":18,"input":"飛虎隊正式名稱為「中華民國空軍美籍志願大隊」，\n1940 年代早期在緬甸展開行動","isHardBreak":false}
+{"segment":"大","index":19,"input":"飛虎隊正式名稱為「中華民國空軍美籍志願大隊」，\n1940 年代早期在緬甸展開行動","isHardBreak":false}
+{"segment":"隊」，\n","index":20,"input":"飛虎隊正式名稱為「中華民國空軍美籍志願大隊」，\n1940 年代早期在緬甸展開行動","isHardBreak":true}
+{"segment":"1940 ","index":24,"input":"飛虎隊正式名稱為「中華民國空軍美籍志願大隊」，\n1940 年代早期在緬甸展開行動","isHardBreak":false}
+{"segment":"年","index":29,"input":"飛虎隊正式名稱為「中華民國空軍美籍志願大隊」，\n1940 年代早期在緬甸展開行動","isHardBreak":false}
+{"segment":"代","index":30,"input":"飛虎隊正式名稱為「中華民國空軍美籍志願大隊」，\n1940 年代早期在緬甸展開行動","isHardBreak":false}
+{"segment":"早","index":31,"input":"飛虎隊正式名稱為「中華民國空軍美籍志願大隊」，\n1940 年代早期在緬甸展開行動","isHardBreak":false}
+{"segment":"期","index":32,"input":"飛虎隊正式名稱為「中華民國空軍美籍志願大隊」，\n1940 年代早期在緬甸展開行動","isHardBreak":false}
+{"segment":"在","index":33,"input":"飛虎隊正式名稱為「中華民國空軍美籍志願大隊」，\n1940 年代早期在緬甸展開行動","isHardBreak":false}
+{"segment":"緬","index":34,"input":"飛虎隊正式名稱為「中華民國空軍美籍志願大隊」，\n1940 年代早期在緬甸展開行動","isHardBreak":false}
+{"segment":"甸","index":35,"input":"飛虎隊正式名稱為「中華民國空軍美籍志願大隊」，\n1940 年代早期在緬甸展開行動","isHardBreak":false}
+{"segment":"展","index":36,"input":"飛虎隊正式名稱為「中華民國空軍美籍志願大隊」，\n1940 年代早期在緬甸展開行動","isHardBreak":false}
+{"segment":"開","index":37,"input":"飛虎隊正式名稱為「中華民國空軍美籍志願大隊」，\n1940 年代早期在緬甸展開行動","isHardBreak":false}
+{"segment":"行","index":38,"input":"飛虎隊正式名稱為「中華民國空軍美籍志願大隊」，\n1940 年代早期在緬甸展開行動","isHardBreak":false}
+{"segment":"動","index":39,"input":"飛虎隊正式名稱為「中華民國空軍美籍志願大隊」，\n1940 年代早期在緬甸展開行動","isHardBreak":false}
+undefined
+
+```
 
 ## [TODO before Stage 1](https://tc39.es/process-document/)
 ### Entrance Criteria to Stage 1
