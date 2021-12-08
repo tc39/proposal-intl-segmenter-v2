@@ -78,8 +78,34 @@ d8> for (s of ss) { print(JSON.stringify(s)) }
 {"segment":"開","index":37,"input":"飛虎隊正式名稱為「中華民國空軍美籍志願大隊」，\n1940 年代早期在緬甸展開行動","isHardBreak":false}
 {"segment":"行","index":38,"input":"飛虎隊正式名稱為「中華民國空軍美籍志願大隊」，\n1940 年代早期在緬甸展開行動","isHardBreak":false}
 {"segment":"動","index":39,"input":"飛虎隊正式名稱為「中華民國空軍美籍志願大隊」，\n1940 年代早期在緬甸展開行動","isHardBreak":false}
-undefined
-
+d8> ss = s.segment("The Flying Tigers is officially called the \"Republic of China Air Force American Volunteer Brigade\",\nand it launched operations in Myanmar in the early 1940s")
+{}
+d8> for (s of ss) { print(JSON.stringify(s)) }
+{"segment":"The ","index":0,"input":"The Flying Tigers is officially called the \"Republic of China Air Force American Volunteer Brigade\",\nand it launched operations in Myanmar in the early 1940s","isHardBreak":false}
+{"segment":"Flying ","index":4,"input":"The Flying Tigers is officially called the \"Republic of China Air Force American Volunteer Brigade\",\nand it launched operations in Myanmar in the early 1940s","isHardBreak":false}
+{"segment":"Tigers ","index":11,"input":"The Flying Tigers is officially called the \"Republic of China Air Force American Volunteer Brigade\",\nand it launched operations in Myanmar in the early 1940s","isHardBreak":false}
+{"segment":"is ","index":18,"input":"The Flying Tigers is officially called the \"Republic of China Air Force American Volunteer Brigade\",\nand it launched operations in Myanmar in the early 1940s","isHardBreak":false}
+{"segment":"officially ","index":21,"input":"The Flying Tigers is officially called the \"Republic of China Air Force American Volunteer Brigade\",\nand it launched operations in Myanmar in the early 1940s","isHardBreak":false}
+{"segment":"called ","index":32,"input":"The Flying Tigers is officially called the \"Republic of China Air Force American Volunteer Brigade\",\nand it launched operations in Myanmar in the early 1940s","isHardBreak":false}
+{"segment":"the ","index":39,"input":"The Flying Tigers is officially called the \"Republic of China Air Force American Volunteer Brigade\",\nand it launched operations in Myanmar in the early 1940s","isHardBreak":false}
+{"segment":"\"Republic ","index":43,"input":"The Flying Tigers is officially called the \"Republic of China Air Force American Volunteer Brigade\",\nand it launched operations in Myanmar in the early 1940s","isHardBreak":false}
+{"segment":"of ","index":53,"input":"The Flying Tigers is officially called the \"Republic of China Air Force American Volunteer Brigade\",\nand it launched operations in Myanmar in the early 1940s","isHardBreak":false}
+{"segment":"China ","index":56,"input":"The Flying Tigers is officially called the \"Republic of China Air Force American Volunteer Brigade\",\nand it launched operations in Myanmar in the early 1940s","isHardBreak":false}
+{"segment":"Air ","index":62,"input":"The Flying Tigers is officially called the \"Republic of China Air Force American Volunteer Brigade\",\nand it launched operations in Myanmar in the early 1940s","isHardBreak":false}
+{"segment":"Force ","index":66,"input":"The Flying Tigers is officially called the \"Republic of China Air Force American Volunteer Brigade\",\nand it launched operations in Myanmar in the early 1940s","isHardBreak":false}
+{"segment":"American ","index":72,"input":"The Flying Tigers is officially called the \"Republic of China Air Force American Volunteer Brigade\",\nand it launched operations in Myanmar in the early 1940s","isHardBreak":false}
+{"segment":"Volunteer ","index":81,"input":"The Flying Tigers is officially called the \"Republic of China Air Force American Volunteer Brigade\",\nand it launched operations in Myanmar in the early 1940s","isHardBreak":false}
+{"segment":"Brigade\",\n","index":91,"input":"The Flying Tigers is officially called the \"Republic of China Air Force American Volunteer Brigade\",\nand it launched operations in Myanmar in the early 1940s","isHardBreak":true}
+{"segment":"and ","index":101,"input":"The Flying Tigers is officially called the \"Republic of China Air Force American Volunteer Brigade\",\nand it launched operations in Myanmar in the early 1940s","isHardBreak":false}
+{"segment":"it ","index":105,"input":"The Flying Tigers is officially called the \"Republic of China Air Force American Volunteer Brigade\",\nand it launched operations in Myanmar in the early 1940s","isHardBreak":false}
+{"segment":"launched ","index":108,"input":"The Flying Tigers is officially called the \"Republic of China Air Force American Volunteer Brigade\",\nand it launched operations in Myanmar in the early 1940s","isHardBreak":false}
+{"segment":"operations ","index":117,"input":"The Flying Tigers is officially called the \"Republic of China Air Force American Volunteer Brigade\",\nand it launched operations in Myanmar in the early 1940s","isHardBreak":false}
+{"segment":"in ","index":128,"input":"The Flying Tigers is officially called the \"Republic of China Air Force American Volunteer Brigade\",\nand it launched operations in Myanmar in the early 1940s","isHardBreak":false}
+{"segment":"Myanmar ","index":131,"input":"The Flying Tigers is officially called the \"Republic of China Air Force American Volunteer Brigade\",\nand it launched operations in Myanmar in the early 1940s","isHardBreak":false}
+{"segment":"in ","index":139,"input":"The Flying Tigers is officially called the \"Republic of China Air Force American Volunteer Brigade\",\nand it launched operations in Myanmar in the early 1940s","isHardBreak":false}
+{"segment":"the ","index":142,"input":"The Flying Tigers is officially called the \"Republic of China Air Force American Volunteer Brigade\",\nand it launched operations in Myanmar in the early 1940s","isHardBreak":false}
+{"segment":"early ","index":146,"input":"The Flying Tigers is officially called the \"Republic of China Air Force American Volunteer Brigade\",\nand it launched operations in Myanmar in the early 1940s","isHardBreak":false}
+{"segment":"1940s","index":152,"input":"The Flying Tigers is officially called the \"Republic of China Air Force American Volunteer Brigade\",\nand it launched operations in Myanmar in the early 1940s","isHardBreak":false}
 ```
 
 ## [TODO before Stage 1](https://tc39.es/process-document/)
