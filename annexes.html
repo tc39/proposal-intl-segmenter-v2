@@ -1,0 +1,27 @@
+<emu-annex id="annex-implementation-dependent-behaviour">
+  <h1>Implementation Dependent Behaviour</h1>
+
+  <p>
+    The following aspects of the ECMAScript 2022 Internationalization API Specification are implementation dependent:
+  </p>
+
+  <ul>
+    <li>
+      In Segmenter:
+      <ul>
+        <li>
+          Boundary determination algorithms (<emu-xref href="#sec-findboundary"></emu-xref>)
+        </li>
+        <li>
+          Classification of segments as "word-like" (<emu-xref href="#sec-createsegmentdataobject"></emu-xref>)
+        </li>
+        <li>
+          <ins>Classification of position before segments as "hard break" (<emu-xref href="#sec-createsegmentdataobject"></emu-xref>)</ins>
+        </li>
+        <li>
+          <ins>The set of supported *"lb"* key values (line break style) per locale (<emu-xref href="#sec-properties-of-intl-segmenter-instances"></emu-xref>)</ins>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</emu-annex>
