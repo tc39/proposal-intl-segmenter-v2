@@ -17,18 +17,22 @@
 
       <emu-alg>
         1. If NewTarget is *undefined*, throw a *TypeError* exception.
-        1. Let _internalSlotsList_ be &laquo; [[InitializedSegmenter]], [[Locale]], [[SegmenterGranularity]] &raquo;.
+        1. Let _internalSlotsList_ be &laquo; [[InitializedSegmenter]], [[Locale]], [[SegmenterGranularity]]<ins>, [[SegmenterLineBreakStyle]]</ins> &raquo;.
         1. Let _segmenter_ be ? OrdinaryCreateFromConstructor(NewTarget, *"%Segmenter.prototype%"*, _internalSlotsList_).
         1. Let _requestedLocales_ be ? CanonicalizeLocaleList(_locales_).
         1. Set _options_ to ? GetOptionsObject(_options_).
         1. Let _opt_ be a new Record.
         1. Let _matcher_ be ? GetOption(_options_, *"localeMatcher"*, *"string"*, &laquo; *"lookup"*, *"best fit"* &raquo;, *"best fit"*).
         1. Set _opt_.[[localeMatcher]] to _matcher_.
+        1. <ins>Let _lineBreakStyle_ be ? GetOption(_options_, *"lineBreakStyle"*, *"string"*, &laquo; *"strict"*, *"normal"*, *"loose"* &raquo;, *"normal"*). </ins>
+        1. <ins>Set _opt_.[[lb]] to _lineBreakStyle_.</ins>
         1. Let _localeData_ be %Segmenter%.[[LocaleData]].
         1. Let _r_ be ResolveLocale(%Segmenter%.[[AvailableLocales]], _requestedLocales_, _opt_, %Segmenter%.[[RelevantExtensionKeys]], _localeData_).
         1. Set _segmenter_.[[Locale]] to _r_.[[locale]].
-        1. Let _granularity_ be ? GetOption(_options_, *"granularity"*, *"string"*, &laquo; *"grapheme"*, *"word"*, *"sentence"* &raquo;, *"grapheme"*).
+        1. Let _granularity_ be ? GetOption(_options_, *"granularity"*, *"string"*, &laquo; *"grapheme"*, *"word"*, *"sentence"*<ins>, *"line"*</ins> &raquo;, *"grapheme"*).
         1. Set _segmenter_.[[SegmenterGranularity]] to _granularity_.
+        1. <ins>If _granularity_ is *"line"*, then</ins>
+          1. <ins>Set _segmenter_.[[SegmenterLineBreakStyle]] to _lineBreakStyle_.</ins>
         1. Return _segmenter_.
       </emu-alg>
     </emu-clause>
@@ -78,7 +82,7 @@
       </p>
 
       <p>
-        The value of the [[RelevantExtensionKeys]] internal slot is &laquo; &raquo;.
+        The value of the [[RelevantExtensionKeys]] internal slot is &laquo; <ins>*"lb"*</ins> &raquo;.
       </p>
 
       <emu-note>
@@ -164,6 +168,10 @@
             <td>[[SegmenterGranularity]]</td>
             <td>*"granularity"*</td>
           </tr>
+          <tr>
+            <td><ins>[[SegmenterLineBreakStyle]]</ins></td>
+            <td><ins>*"lineBreakStyle"*</ins></td>
+          </tr>
         </table>
       </emu-table>
     </emu-clause>
@@ -186,7 +194,8 @@
 
     <ul>
       <li>[[Locale]] is a String value with the language tag of the locale whose localization is used for segmentation.</li>
-      <li>[[SegmenterGranularity]] is one of the String values *"grapheme"*, *"word"*, or *"sentence"*, identifying the kind of text element to segment.</li>
+      <li>[[SegmenterGranularity]] is one of the String values *"grapheme"*, *"word"*, <del>or </del>*"sentence"*<ins>, or *"line"*</ins>, identifying the kind of text element to segment.</li>
+      <li><ins>[[SegmenterLineBreakStyle]] is present on Segmenter instances with line granularity. If present, it may be *"strict"*, *"normal"*, or *"loose"*.</ins></li>
     </ul>
   </emu-clause>
 
@@ -380,6 +389,9 @@
         1. If _granularity_ is `"word"`, then
           1. Let _isWordLike_ be a Boolean value indicating whether the _segment_ in _string_ is "word-like" according to locale _segmenter_.[[Locale]].
           1. Perform ! CreateDataPropertyOrThrow(_result_, *"isWordLike"*, _isWordLike_).
+        1. <ins>Else if _granularity_ is *"line"*, then</ins>
+          1. <ins>Let _isHardBreak_ be a Boolean value indicating whether the position before the _segment_ in _string_ is a hard, or mandatory, line break, but not a soft line breaks at which a line break is acceptable but not required,  according to locale _segmenter_.[[Locale]] and _segmenter_.[[SegmenterLineBreakStyle]].</ins>
+          1. <ins>Perform ! CreateDataPropertyOrThrow(_result_, *"isHardBreak"*, _isHardBreak_).</ins>
         1. Return _result_.
       </emu-alg>
       <emu-note>Whether a segment is "word-like" is implementation-dependent, and implementations are recommended to use locale-sensitive tailorings. In general, segments consisting solely of spaces and/or punctuation (such as those terminated with "WORD_NONE" boundaries by ICU [International Components for Unicode, documented at <a href="https://unicode-org.github.io/icu-docs/">https://unicode-org.github.io/icu-docs/</a>]) are not considered to be "word-like".</emu-note>
@@ -400,12 +412,22 @@
         1. If _direction_ is ~before~, then
           1. Assert: _startIndex_ &ge; 0.
           1. Assert: _startIndex_ &lt; _len_.
-          1. Search _string_ for the last segmentation boundary that is preceded by at most _startIndex_ code units from the beginning, using locale _locale_ and text element granularity _granularity_.
+          1. <del>Search _string_ for the last segmentation boundary that is preceded by at most _startIndex_ code units from the beginning, using locale _locale_ and text element granularity _granularity_.</del>
+          1. <ins>If _granularity_ is *"line"*, then</ins>
+            1. <ins>Let _lineBreakStyle_ be _segmenter_.[[SegmenterLineBreakStyle]].</ins>
+            1. <ins>Search _string_ for the last segmentation boundary that is preceded by at most _startIndex_ code units from the beginning, using locale _locale_, text element granularity _granularity_, and line break style _lineBreakStyle_.</ins>
+          1. <ins>Else,<ins>
+            1. <ins>Search _string_ for the last segmentation boundary that is preceded by at most _startIndex_ code units from the beginning, using locale _locale_ and text element granularity _granularity_.</ins>
           1. If a boundary is found, return the count of code units in _string_ preceding it.
           1. Return 0.
         1. Assert: _direction_ is ~after~.
         1. If _len_ is 0 or _startIndex_ &ge; _len_, return +&infin;.
-        1. Search _string_ for the first segmentation boundary that follows the code unit at index _startIndex_, using locale _locale_ and text element granularity _granularity_.
+        1. <del>Search _string_ for the first segmentation boundary that follows the code unit at index _startIndex_, using locale _locale_ and text element granularity _granularity_.</del>
+        1. <ins>If _granularity_ is *"line"*, then</ins>
+          1. <ins>Let _lineBreakStyle_ be _segmenter_.[[SegmenterLineBreakStyle]].</ins>
+          1. <ins>Search _string_ for the first segmentation boundary that follows the code unit at index _startIndex_, using locale _locale_, text element granularity _granularity_, and line break style _lineBreakStyle_.</ins>
+        1. <ins>Else,<ins>
+          1. <ins>Search _string_ for the first segmentation boundary that follows the code unit at index _startIndex_, using locale _locale_ and text element granularity _granularity_.</ins>
         1. If a boundary is found, return the count of code units in _string_ preceding it.
         1. Return _len_.
       </emu-alg>
