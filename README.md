@@ -108,6 +108,8 @@ d8> for (s of ss) { print(JSON.stringify(s)) }
 {"segment":"1940s","index":152,"input":"The Flying Tigers is officially called the \"Republic of China Air Force American Volunteer Brigade\",\nand it launched operations in Myanmar in the early 1940s","isHardBreak":false}
 ```
 
+The above result are based on the real output of [v8 prototype CL](https://chromium-review.googlesource.com/c/v8/v8/+/3324785)
+
 ## [TODO before Stage 1](https://tc39.es/process-document/)
 ### Entrance Criteria to Stage 1
 * Identified “champion” who will advance the addition **DONE => Frank Yung-fong Tang**
