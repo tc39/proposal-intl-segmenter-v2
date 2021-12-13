@@ -29,15 +29,15 @@ This proposal aim to improve the [Intl.Segmenter](https://tc39.es/proposal-intl-
 
 Note: The "Batch Mode" is removed from the proposal after careful discussion with some intended users. 
 ### Line Break Granularity
-* (From @gibson042 ) Formatting in a monospace context, such as a CLI or GitHub source diff.
+* **From @gibson042:** Formatting in a monospace context, such as a CLI or GitHub source diff.
 * For non-HTML context while font metrics is available 
 * &lt;text&gt; in SVG and https://d3js.org/ 
 * To avoid the misue of word break in the place for line break. (Canvas drawstring and SVG usecase)
 * Being persistently requested by users even after the shipment of Intl.Segmenter
-* (from my2iu) It is becoming increasingly common now for web apps to have custom text rendering, and these web apps need an API for line segmentation to be able to lay out text in lines with wrapping. HTML/CSS are too high-level to provide the font support that many web apps need, so low-level API is needed. Line-breaking libraries tend to be fairly large, so it's not really practical to directly bundle them in web apps either, so it would be better if the browser could provide this functionality. Custom text rendering is used in
+* **From @my2iu :** It is becoming increasingly common now for web apps to have custom text rendering, and these web apps need an API for line segmentation to be able to lay out text in lines with wrapping. HTML/CSS are too high-level to provide the font support that many web apps need, so low-level API is needed. Line-breaking libraries tend to be fairly large, so it's not really practical to directly bundle them in web apps either, so it would be better if the browser could provide this functionality. Custom text rendering is used in
   * application web apps for word processing, vector illustration, paint programs, svg visualizations, etc any web page that needs to render text in WebGL or VR/AR (via WebXR). 
   * Good-looking text in 3d engines is commonly implemented using signed-distance fields, which requires a custom text renderer
-* (from @HackbrettXXX , contributor to jsPDF):
+* **From @HackbrettXXX , contributor to jsPDF**:
   * Creating text documents of any kind: e.g. PDF with jsPDF: jsPDF offers functionality to automatically split text into lines. However, currently it only supports Western-style line breaks: words = text.split(" "). Adding Line Break to Intl.Segmenter could improve that. In jsPDF, the text is measured by loading the font files and calculating the text size from the glyph sizes.
   * Rendering multiline text in a context in the browser where HTML/CSS layout cannot be used, e.g. when using SVG, canvas, or WebGL for rendering. Here, the text can be measured with canvas' measureText() or SVG's getComputedTextLength() or getBBox().
 
