@@ -40,6 +40,8 @@ Note: The "Batch Mode" is removed from the proposal after careful discussion wit
 * **From @HackbrettXXX , contributor to jsPDF**:
   * Creating text documents of any kind: e.g. PDF with jsPDF: jsPDF offers functionality to automatically split text into lines. However, currently it only supports Western-style line breaks: words = text.split(" "). Adding Line Break to Intl.Segmenter could improve that. In jsPDF, the text is measured by loading the font files and calculating the text size from the glyph sizes.
   * Rendering multiline text in a context in the browser where HTML/CSS layout cannot be used, e.g. when using SVG, canvas, or WebGL for rendering. Here, the text can be measured with canvas' measureText() or SVG's getComputedTextLength() or getBBox().
+* **From @mdebbar , contributor to Flutter Web **:
+  * Needed for [Text layout in Flutter Web](https://gist.github.com/mdebbar/93886d22a4cd40e050d1533d7e0016bf#1-line-breaks).
 
 ## Examples
 ```
