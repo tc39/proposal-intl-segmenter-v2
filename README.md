@@ -8,7 +8,7 @@ You can browse the [ecmarkup output](https://FrankYFTang.github.io/proposal-intl
 or browse the [source](https://github.com/FrankYFTang/proposal-intl-segmenter-v2/blob/HEAD/spec.emu).
 
 ## Stage 1
-[Proposed Spec Text (in green) as diff of Intl.Segmenter](https://frankyftang.github.io/proposal-intl-segmenter-v2/)
+[Proposed Spec Text (in green) as diff of Intl.Segmenter](https://tc39-transfer.github.io/proposal-intl-segmenter-v2/)
 
 ## Stage Advancement Slide
 * [Slides for TG2/ECMA402 Stage 1 concensus](https://docs.google.com/presentation/d/1ezpdee0r_ujHXDqqT4HHNYa2Q4VU7b4cMQWg6gQxLTk/) (Discussed in TG2/ECMA402 2021 Dec 2 meeting)
