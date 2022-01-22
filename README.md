@@ -13,7 +13,7 @@ or browse the [source](https://github.com/FrankYFTang/proposal-intl-segmenter-v2
 ## Stage Advancement Slide
 * [Slides for TG2/ECMA402 Stage 1 concensus](https://docs.google.com/presentation/d/17PBzlB8zggSsIj6GZwKVXa_sUXC9sK1tHzHJPvX2SSE) (Discussed in TG2/ECMA402 2021 Dec 2 meeting)
 * [Advanced to Stage 1 in TC39 2021 Dec meeting](https://docs.google.com/presentation/d/1ezpdee0r_ujHXDqqT4HHNYa2Q4VU7b4cMQWg6gQxLTk/)
-* [Slides for TG2/ECMA402 2022-01-13 Stage 2 Discussion](https://docs.google.com/presentation/d/1BJl99uYveimKrMw605KyaZ0qLthIhNaqONDPwdYH53A) 
+* [Slides for TG2/ECMA402 2022-01-13 Stage 2 Discussion and 2022-01-24 TC39](https://docs.google.com/presentation/d/1BJl99uYveimKrMw605KyaZ0qLthIhNaqONDPwdYH53A) 
 
 
 ## Staff
