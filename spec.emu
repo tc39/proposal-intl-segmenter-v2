@@ -4,7 +4,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/github.min.css">
 <script src="./spec.js"></script>
 <pre class="metadata">
-title: Intl.Segmenter v2 Prposal
+title: Intl.Segmenter v2 Proposal
 stage: 1
 location: https://tc39.github.io/proposal-intl-segmenter-v2/
 copyright: true
